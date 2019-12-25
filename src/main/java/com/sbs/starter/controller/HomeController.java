@@ -11,7 +11,7 @@ public class HomeController {
 	@ResponseBody
 	public String showMain() 
 	{
-		return "메인화면 입니다.";
+		return "메인화면 입니다!";
 	}
 
 }
