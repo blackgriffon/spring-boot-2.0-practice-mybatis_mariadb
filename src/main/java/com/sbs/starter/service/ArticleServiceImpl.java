@@ -3,26 +3,23 @@ package com.sbs.starter.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sbs.starter.dao.ArticleDao;
 import com.sbs.starter.dto.Article;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
+	@Autowired
+	ArticleDao articleDao;
+	//이제 ArticleService는 데이터 관련해서 모두 Dao에게 위임
+	
 	public List<Article> getList() 
 	{
-		Article article1 = new Article(1, "2019-08-20 12:12:12", "제목1", "내용1");
-		Article article2 = new Article(2, "2019-08-21 12:12:13", "제목2", "내용2");
-		Article article3 = new Article(3, "2019-08-22 12:12:14", "제목3", "내용3");
+		return articleDao.getList();		
+
 		
-		
-		List<Article> list = new ArrayList<>();
-		
-		list.add(article1);
-		list.add(article2);
-		list.add(article3);
-		
-		return list;
 	}
 	
 }
