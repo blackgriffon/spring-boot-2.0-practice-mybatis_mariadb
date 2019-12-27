@@ -13,7 +13,7 @@
 	
 	<!-- el 문법 -->
 	<!-- ${list} -->
-	
+
 	
 	<h2>v2-el,jstl버전</h2>
 	<c:forEach items = "${list}" var="article"> 
