@@ -55,12 +55,20 @@
 		</dependency>
 
 		<!-- getter, setter, 생성자 등을 자동으로 생성해주는 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency> -->
 
+		<!-- getter, setter, 생성자 등을 자동으로 생성해주는 -->
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+    		<groupId>org.projectlombok</groupId>
+    		<artifactId>lombok</artifactId>
+    		<version>1.18.8</version>
+   			<scope>provided</scope>
+		</dependency>
 		
 
 		<!-- JSTL, 스프링의 기본 내장 톰캣에는 이게 없습니다. -->
