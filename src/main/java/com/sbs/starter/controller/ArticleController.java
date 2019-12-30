@@ -34,4 +34,12 @@ public class ArticleController {
 		return "article/list";
 	}
 	
+	@RequestMapping("/article/add")	
+	public String showAdd() 
+	{
+		List<Article> list = articleService.getList();					
+		return "article/add";
+	}
+	
+	
 }
