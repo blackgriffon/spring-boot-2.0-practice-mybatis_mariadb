@@ -31,7 +31,7 @@ public class ArticleController {
 		aModel.addAttribute("list", list);
 		//request.setAttribute("list", list); 와 똑같은 표현
 		
-		//Log.info("list : " + list);
+		aModel.addAttribute("totalCount", 10);
 		
 		return "article/list";
 	}
