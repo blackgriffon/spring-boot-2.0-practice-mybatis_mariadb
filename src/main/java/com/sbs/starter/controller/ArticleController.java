@@ -44,14 +44,11 @@ public class ArticleController {
 	
 	@RequestMapping("/article/doAdd")	
 	@ResponseBody
-	//HttpServletRequest req;
 	public String doAdd(@RequestParam Map<String, Object> param) 
-	{	
-		//param.put("title2", title);
-		articleService.add(param);
-//		param.get("title");
-//		param.get("body");
-		return "게시물이 추가되었습니다.";
+	{			
+		long newId = articleService.add(param);
+		
+		return newId + "번 게시물이 추가되었습니다.";
 	}
 	
 	
